@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dale's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="portfolio-body">
+
+    <div class="track">
+        <div class="ball"></div>
+    </div>
+
+    <header class="intro">
+        <div class="intro-text">
+            <h1 class="fade-in">Hi, I'm Dale McCord Jr.</h1>
+            <div class="typing-container">
+                <p class="typing-animation">Web Developer | Front-end Specialist</p>
+            </div>
+            <div class="button-container">
+                <button class="scroll-button" onclick="scrollToSection('about')">Explore My Work</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Dale McCord Jr., an aspiring web developer with a passion for building engaging and functional online experiences. I started my development journey in 2019 by learning HTML and CSS, and soon after picked up JavaScript. Since then, I've used platforms like Udemy and Coursera to continue growing my skills. I've built personal websites and crafted a few Chrome extensions, always excited to turn ideas into code.</p>
+    </section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-gallery">
+
+        <a href="/Personal Website/Pokedex1/pokedex.html" class="project-link">
+            <div class="project-card scale-on-hover">
+                <img src="Images/pokedex.png" alt="Pokédex">
+            </div>
+        </a>
+
+        <a href="/Personal Website/Blog1/blog.html" class="project-link">
+            <div class="project-card scale-on-hover">
+                <img src="Images/blog.png" alt="Blog">
+            </div>
+        </a>
+    </div>
+</section>
+
+<section id="interests">
+    <h2>My Interests</h2>
+    <div class="interests-gallery">
+        <div class="interest-item">
+            <img src="Images/hiking.webp" alt="Walking and Hiking">
+            <div class="overlay">
+                <p>I love going for long walks or hikes, especially in the fall (my favorite season).</p>
+            </div>
+        </div>
+        <div class="interest-item">
+            <img src="Images/gaming.webp" alt="Playing Video Games">
+            <div class="overlay">
+                <p>Playing video games with friends is always a fun time for me.</p>
+            </div>
+        </div>
+        <div class="interest-item">
+            <img src="Images/reading.webp" alt="Reading Books">
+            <div class="overlay">
+                <p>I'm always in the middle of a book—whether business or fantasy. Favorites: *How to be a Capitalist Without Any Capital* by Nathan Latka and *The Mercedes Thompson* series by Patricia Briggs.</p>
+            </div>
+        </div>
+        <div class="interest-item">
+            <img src="Images/watching tv.webp" alt="Watching Baking Shows">
+            <div class="overlay">
+                <p>I love watching baking shows with my family! Favorites: *Nailed It* and *Is It Cake?* on Netflix.</p>
+            </div>
+        </div>
+        <div class="interest-item">
+            <img src="Images/coding.webp" alt="Coding">
+            <div class="overlay">
+                <p>Coding, of course!</p>
+            </div>
+        </div>
+        <div class="interest-item">
+            <img src="Images/seeing movies.webp" alt="Seeing Movies">
+            <div class="overlay">
+                <p>Seeing a good movie. I love comedy, action, and thrillers. And I see every Marvel movie.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Dale McCord Jr. All rights reserved.</p>
+    </footer>
+
+    <script src="portfolioscript.js"></script>
+</body>
+</html>

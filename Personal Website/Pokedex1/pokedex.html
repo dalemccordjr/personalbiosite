@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+
+    .pokedex-container {
+      margin: 50px auto;
+      width: 80%;
+    }
+
+    #search-bar {
+      width: 60%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    #pokemon-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .pokemon-card {
+      background-color: #fff;
+      border-radius: 15px;
+      margin: 10px;
+      padding: 20px;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .pokemon-card img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .pokemon-card:hover {
+      transform: scale(1.1);
+    }
+
+    /* Different colors for different Pokémon types */
+    .type-fire {
+      background-color: #fddfdf;
+    }
+    .type-water {
+      background-color: #def3fd;
+    }
+    .type-grass {
+      background-color: #defde0;
+    }
+    .type-electric {
+      background-color: #fcf7de;
+    }
+    .type-psychic {
+      background-color: #eaeda1;
+    }
+    .type-ice {
+      background-color: #e0f5ff;
+    }
+    .type-dragon {
+      background-color: #97b3e6;
+    }
+    .type-fairy {
+      background-color: #fceaff;
+    }
+    .type-dark {
+      background-color: #a8a8a8;
+    }
+  </style>
+</head>
+<body id="pokedex-body">
+  <div class="pokedex-container">
+    <h1>Pokédex</h1>
+    <input type="text" id="search-bar" placeholder="Search Pokémon by name or ID">
+    <div id="pokemon-container"></div>
+  </div>
+  <script src="pokedexscript.js"></script>
+</body>
+</html>

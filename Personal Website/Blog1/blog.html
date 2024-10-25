@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Personal Website/Blog1/style.css">
+    <title>Dale's Simple Blog</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#posts">Blog Posts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Dale's Blog</h1>
+    </header>
+
+    <main>
+        <section id="home">
+            <p>Welcome! This is my web development blog.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Dale McCord Jr. I'm an aspiring web developer, passionate about learning new technologies and building clean, functional websites. This blog is part of my portfolio to showcase my skills.</p>
+        </section>
+
+        <section id="posts">
+            <h2>Blog Posts</h2>
+            <div id="blog-posts"></div>
+        </section>
+
+        <section id="add-post">
+            <h2>Add a New Post</h2>
+            <form id="new-post-form">
+                <label for="post-title">Title:</label><br>
+                <input type="text" id="post-title" required><br><br>
+
+                <label for="post-content">Content:</label><br>
+                <textarea id="post-content" rows="4" required></textarea><br><br>
+
+                <button type="submit">Add Post</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2024 Dale McCord Jr.</p>
+    </footer>
+
+    <script src="blogscript.js"></script>
+</body>
+</html>

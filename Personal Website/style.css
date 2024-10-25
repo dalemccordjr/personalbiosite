@@ -1,0 +1,264 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+#portfolio-body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: 
+        radial-gradient(circle, rgba(0, 0, 0, 0.05) 5px, transparent 6px),
+        radial-gradient(circle, rgba(0, 0, 0, 0.03) 10px, transparent 12px),
+        radial-gradient(circle, rgba(0, 0, 0, 0.02) 15px, transparent 18px);
+    background-size: 80px 80px, 150px 150px, 300px 300px;
+    background-position: 0 0, 40px 40px, 20px 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+header, section, footer {
+    background-color: transparent;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    z-index: 2;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.typing-container {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+p, h1, h2, h3, input, textarea, label {
+    position: relative;
+    z-index: 4;
+}
+
+#projects {
+    margin: 50px 0;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.project-card {
+    width: 360px; 
+    padding: 0; 
+    border: 1px solid black; 
+    border-radius: 8px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    max-height: 240px; 
+    object-fit: cover; 
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.05); 
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.typing-animation {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    font-size: 1.5rem;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#interests {
+    margin: 50px 0;
+    text-align: center;
+}
+
+#interests h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.interests-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.interest-item {
+    position: relative;
+    width: calc(33.333% - 20px); 
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.interest-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.interest-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    pointer-events: none; 
+}
+
+.interest-item:hover .overlay {
+    opacity: 1;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form {
+    gap: 15px; 
+    max-width: 400px; 
+}
+
+#contact label {
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+#contact button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#contact button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+}
